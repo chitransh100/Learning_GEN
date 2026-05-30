@@ -1,3 +1,6 @@
+#python -m venv venv
+#source venev/bin/activate
+
 # LangChain Core
 langchain
 langchain-core
