@@ -1,0 +1,19 @@
+{
+    "name": null,
+    "input_variables": [
+        "focus",
+        "length",
+        "paper",
+        "style",
+        "sub_style"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\nYou are an expert code assistant.\n\nYour task is to summarize the given code repo.\n\n### Instructions:\n- Summary Type: {style}\n- Style Detail: {sub_style}\n- Length: {length}\n- Focus Area: {focus}\n\n### Guidelines:\n- Keep the summary accurate and concise\n- Do not add information not present in the text\n- Highlight key ideas, methodology, and results\n\n### Paper:\n{paper}\n\n### Output Format:\n- Title\n- Key Idea\n- Summary\n- Conclusion\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
