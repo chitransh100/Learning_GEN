@@ -28,7 +28,8 @@ Your task is to summarize the given code repo.
 
 prompt_template = PromptTemplate(
     input_variables=["style", "sub_style", "length", "focus", "paper"],
-    template=template
+    template=template,
+    validate_template=True
 )
 
 prompt_template.save("code_assistant.json"); 

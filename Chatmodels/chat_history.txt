@@ -1,0 +1,18 @@
+Human: hii there 
+AI: {
+    "answer": "Hello! How can I assist you today?",
+    "confidence": "high",
+    "source": "general conversation"
+}
+Human: how are you 
+AI: {
+    "answer": "I'm doing well, thank you for asking! How can I help you today?",
+    "confidence": "high",
+    "source": "general conversation"
+}
+Human: do you know about the paper named attention is all you need 
+AI: {
+  "answer": "Yes, I know the paper \"Attention Is All You Need\" (Vaswani et al., 2017). It introduced the Transformer model, which relies solely on self-attention mechanisms, dispensing with recurrence and convolutions. This architecture became the foundation for many modern NLP models like BERT, GPT, and others.",
+  "confidence": "high",
+  "source": "general knowledge"
+}
