@@ -4,8 +4,12 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 from langchain_core.runnables import  RunnableLambda, RunnableBranch, RunnablePassthrough
+from langchain_community.document_loaders import PyPDFLoader
 
 load_dotenv()
+
+def count_words(text):
+    return len(text.split())
 
 llm = HuggingFaceEndpoint(
     repo_id = "deepseek-ai/DeepSeek-V4-Pro",
@@ -14,10 +18,13 @@ llm = HuggingFaceEndpoint(
     temperature=0.5,
 )
 
-def count_words(text):
-    return len(text.split())
-
 model = ChatHuggingFace(llm = llm)
-result = model.invoke("what are the rising tensions in the US and iran ")
 
-print(result)
+loader = PyPDFLoader("GATE-score.pdf");
+
+doc = loader.load()
+
+# print(len(doc))
+print(doc[0].page_content)
+print(doc[1].metadata)
+
